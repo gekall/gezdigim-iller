@@ -93,6 +93,8 @@ h1{font:600 clamp(34px,6vw,52px)/1.05 "Barlow Condensed",sans-serif;margin:0;tex
 #map path:hover{fill:light-dark(#c6c1ba,#3d3d44)}
 #map path.v{fill:var(--red)}
 #map path.v:hover{fill:light-dark(#b80812,#c8101c)}
+#map path.n{fill:light-dark(#f4bcc0,#5e2b31)}
+#map path.n:hover{fill:light-dark(#eea2a8,#6e333a)}
 #map path.sel{stroke:var(--blue);stroke-width:3}
 #map text{font-family:"Barlow Condensed",sans-serif;font-weight:600;fill:light-dark(#77736d,#8c8c93);text-anchor:middle;dominant-baseline:central;pointer-events:none}
 #map text.v{fill:#fff}
@@ -102,7 +104,7 @@ h1{font:600 clamp(34px,6vw,52px)/1.05 "Barlow Condensed",sans-serif;margin:0;tex
 .mzb{width:44px;height:44px;border:0;border-radius:12px;background:var(--bg);color:var(--ink);box-shadow:0 2px 8px #0003;display:grid;place-items:center}
 .lg{display:flex;flex-wrap:wrap;align-items:center;gap:6px 18px;margin-top:10px;font-size:13px;color:var(--mute)}
 .lg i{display:inline-block;width:12px;height:12px;margin-right:6px;border-radius:3px;background:var(--land);vertical-align:-1px}
-.lg i.v{background:var(--red)}.lg i.dt{border-radius:50%;background:#fff;border:1.5px solid #111}
+.lg i.v{background:var(--red)}.lg i.nt{background:light-dark(#f4bcc0,#5e2b31)}.lg i.dt{border-radius:50%;background:#fff;border:1.5px solid #111}
 .mcard{margin-top:14px;padding:14px;border:1.5px solid var(--line);border-radius:16px}
 .mch{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
 .mch>div{flex:1}
@@ -112,6 +114,54 @@ h1{font:600 clamp(34px,6vw,52px)/1.05 "Barlow Condensed",sans-serif;margin:0;tex
 .mth{flex:none;width:96px;height:96px;padding:0;border:0;border-radius:10px;overflow:hidden;background:var(--tile);cursor:zoom-in}
 .mth img{display:block;width:100%;height:100%;object-fit:cover}
 .mcard>.btn{margin-top:12px}
+/* notlar */
+.nvw{padding:14px var(--pad) 36px}
+.nbar{display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+.nbar .search{flex:1 1 260px;max-width:none}
+.nbar .btn{height:46px}
+.ng{margin-top:16px;border:1.5px solid var(--line);border-radius:16px;overflow:hidden}
+.ngh{display:flex;align-items:center;gap:10px;padding:6px 8px 6px 12px;background:var(--tile)}
+.ngt{display:flex;align-items:center;gap:10px;flex:1;min-height:48px;color:inherit;text-decoration:none}
+.ngt b{font:600 22px/1.1 "Barlow Condensed",sans-serif}
+.ngt small{font-size:13px;color:var(--mute);font-weight:500;white-space:nowrap}
+.ia{width:44px;height:44px;flex:none;border:0;border-radius:12px;background:var(--bg);color:var(--ink);display:grid;place-items:center;box-shadow:0 1px 3px #0002}
+.nrs{border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
+.ng .nrs{border:0;border-radius:0}
+.nr{display:flex;align-items:flex-start;gap:2px;padding:4px 12px 4px 4px;border-top:1px solid var(--line);background:var(--bg)}
+.nrs>.nr:first-child{border-top:0}
+.ck{width:44px;height:44px;flex:none;padding:0;border:0;background:none;display:grid;place-items:center}
+.cb{width:24px;height:24px;border:2px solid light-dark(#a9a5a0,#6b6b72);border-radius:50%;display:grid;place-items:center;color:transparent;transition:background .15s}
+.cb svg{width:14px;height:14px;stroke-width:3}
+.ck[aria-pressed=true] .cb{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.nb{flex:1;min-height:44px;padding:10px 2px;cursor:pointer;border-radius:8px}
+.nb p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.nb a{color:var(--redt);text-underline-offset:2px}
+.nr.dn .nb p{color:var(--mute)}
+.nr.dn .tx{text-decoration:line-through}
+.tag{display:inline-block;margin-right:6px;padding:0 8px;border-radius:99px;font-size:13px;font-weight:600;line-height:22px;vertical-align:1px;white-space:nowrap}
+.t-ye{background:light-dark(#fde4d1,#3f2414);color:light-dark(#a8400a,#ffac70)}
+.t-gez{background:light-dark(#dde7fb,#172442);color:light-dark(#0b3fa3,#93b3ff)}
+.t-kal{background:light-dark(#d7efeb,#123430);color:light-dark(#0d6159,#71d9c9)}
+.t-not{background:var(--tile);color:var(--mute)}
+.nmore{display:block;padding:12px 14px;border-top:1px solid var(--line);color:var(--redt);font-weight:600;text-decoration:none}
+.cn{padding:20px var(--pad) 0}
+.cnh{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px}
+.cnh b{font:600 26px/1.1 "Barlow Condensed",sans-serif}
+.cnh span{color:var(--mute);font-size:15px}
+.mcn{margin-top:12px}
+.nw{white-space:nowrap}
+.mcb{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+/* not düzenleyici */
+.ned{max-width:500px;display:flex;flex-direction:column;gap:12px;padding:16px}
+.ilb{display:flex;align-items:center;gap:10px;width:100%;min-height:52px;padding:0 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);text-align:left;font-weight:600;font-size:17px}
+.ilb>span:nth-child(2){flex:1}
+.ilb small{color:var(--mute);font-weight:500;font-size:14px}
+.seg{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+.sg{height:44px;padding:0 4px;border-radius:10px;border:1.5px solid var(--line);background:none;font-weight:600;font-size:15px;white-space:nowrap}
+.sg[aria-checked=true]{background:var(--ink);border-color:var(--ink);color:var(--bg)}
+.nta{display:block;width:100%;min-height:150px;max-height:50vh;padding:12px 14px;border:1.5px solid var(--line);border-radius:12px;background:var(--bg);font-size:16px;line-height:1.5;resize:vertical}
+.ned .row{margin-top:0;align-items:center}
+.ned .row .sp{flex:1}
 /* yedek */
 .bk{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 20px;margin-top:8px;padding:18px var(--pad) calc(40px + var(--sb));border-top:1px solid var(--line)}
 .bk b{display:block;font-weight:600}
@@ -191,6 +241,11 @@ body.drag main:not([hidden]) .grid,body.drag main:not([hidden]) .gal{outline:3px
 .chead{display:block}.chead .add{width:100%;margin-top:18px}
 .lbtop .tb span{display:none}.lbtop .tb{width:44px;padding:0}
 .nav{display:none}
+.nbar .btn{flex:1 1 100%;justify-content:center}
+.seg{grid-template-columns:repeat(2,minmax(0,1fr))}
+#ne{place-items:start center;padding:calc(8px + var(--st)) 8px 8px}
+.nta{min-height:120px;max-height:34vh}
+.cn{padding:18px 16px 4px}
 #pk{place-items:end center;padding:0}.sheet{max-width:none;height:86vh;border-radius:18px 18px 0 0;padding-bottom:calc(16px + var(--sb))}
 }
 @media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
@@ -218,7 +273,7 @@ body.drag main:not([hidden]) .grid,body.drag main:not([hidden]) .gal{outline:3px
     <div class=trs id=trs></div>
   </div></section>
   <div class="ctl wrap">
-    <nav class=tabs role=tablist aria-label=Görünüm><a class=tab id=tg href="#" role=tab aria-selected=true>İller</a><a class=tab id=tm href="#harita" role=tab aria-selected=false>Harita</a></nav>
+    <nav class=tabs role=tablist aria-label=Görünüm><a class=tab id=tg href="#" role=tab aria-selected=true>İller</a><a class=tab id=tm href="#harita" role=tab aria-selected=false>Harita</a><a class=tab id=tn href="#notlar" role=tab aria-selected=false>Notlar</a></nav>
   </div>
   <div id=gv>
     <div class="ctl wrap" style="padding-top:14px">
@@ -238,16 +293,22 @@ body.drag main:not([hidden]) .grid,body.drag main:not([hidden]) .gal{outline:3px
         <button class=mzb data-act=zfit aria-label="Bütün Türkiye"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/></svg></button>
       </div>
     </div>
-    <div class=lg><span><i class=v></i>Gezdiğin il</span><span><i></i>Henüz gidilmedi</span><span><i class=dt></i>Fotoğrafın çekildiği yer</span><span>Bir ile dokun; iki parmakla ya da tekerlekle yakınlaştır.</span></div>
+    <div class=lg><span><i class=v></i>Gezdiğin il</span><span><i class=nt></i>Not aldığın il</span><span><i></i>Henüz gidilmedi</span><span><i class=dt></i>Fotoğrafın çekildiği yer</span><span>Bir ile dokun; iki parmakla ya da tekerlekle yakınlaştır.</span></div>
     <div class=mcard id=mcard hidden></div>
   </div>
+  <div id=nv class="nvw wrap" hidden>
+    <div class=nbar><input class=search id=nq type=search placeholder="Notlarda ara: il, yemek, yer…" autocomplete=off aria-label="Notlarda ara"><button class="btn dng" id=nadd data-act=nadd hidden><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>Not ekle</button></div>
+    <div class=chips id=ncf></div>
+    <div id=nl></div>
+  </div>
   <section class="bk wrap">
-    <div><b>Fotoğrafların yalnızca bu telefonda</b><p id=bk></p></div>
+    <div><b>Fotoğrafların ve notların yalnızca bu telefonda</b><p id=bk></p></div>
     <div class=tra><button class=btn data-act=exp>Yedek al</button><button class=btn data-act=imp>Yedeği geri yükle</button></div>
   </section>
 </main>
 <main id=city hidden>
   <header class=band><div class=wrap id=ch></div></header>
+  <section class="cn wrap" id=cn></section>
   <div class="gal wrap" id=gal><div id=pend></div><div id=pics></div></div>
 </main>
 
@@ -271,6 +332,13 @@ body.drag main:not([hidden]) .grid,body.drag main:not([hidden]) .gal{outline:3px
   <div class=lbbot><textarea class=note id=note rows=1 aria-label="Fotoğraf notu"></textarea><p class=lbd id=lbd></p></div>
 </div>
 
+<div class=dlg id=ne hidden><div class="box ned" role=dialog aria-modal=true aria-labelledby=net>
+  <div class=pkh><b id=net>Yeni not</b><button class=x data-act=nex aria-label=Kapat><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
+  <button class=ilb id=neil data-act=neil aria-label="İli değiştir"></button>
+  <div class=seg id=nec role=radiogroup aria-label="Not türü"></div>
+  <textarea class=nta id=netx rows=5 maxlength=2000 aria-label="Not"></textarea>
+  <div class=row><button class=btn id=nedel data-act=nedel>Sil</button><span class=sp></span><button class=btn data-act=nex>Vazgeç</button><button class="btn dng" data-act=nesave>Kaydet</button></div>
+</div></div>
 <div class=dlg id=pk hidden><div class="box sheet" role=dialog aria-modal=true aria-labelledby=pkt>
   <div class=pkh><b id=pkt>Hangi il?</b><button class=x data-act=pkx aria-label=Kapat><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button></div>
   <input class=search id=pkq type=search placeholder="İl ara…" autocomplete=off aria-label="İl ara">
@@ -306,6 +374,7 @@ const svg=(d,w)=>`<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" str
 const I={plus:svg("M12 5v14M5 12h14",2.4),back:svg("M15 5l-7 7 7 7"),check:svg("M5 12.5l4.5 4.5L19 7.5")};
 
 let idb=null,ok=false,ready=false,fail="",data={},box={},meta={};
+let ncat="",hideDone=false,notesY=0,ned=null,lastCat="gez";
 let tab="grid",filt="all",reg="",q="",cur=null,homeY=0,mapY=0,lbList=[],lbI=0,addTo=null,pendingOpen=null,busy=false,fullUrl="",askedPersist=false;
 const sel=new Set(),seen=new Set(),chain={},jobs=[],urls=new Map();
 let working=false,curJob=null,bt=null,pkR=null,askR=null,tt=0,ut=0;
@@ -317,6 +386,14 @@ const sorted=id=>photos(id).slice().sort((a,b)=>when(b)-when(a));
 const cover=id=>{const ps=photos(id);if(!ps.length)return null;return ps.find(p=>p.k===data[id].cover)||sorted(id)[0]};
 const docOf=path=>path===BOX?box:data[path.slice(6)];
 const allPhotos=()=>IL.reduce((a,il)=>a.concat(photos(il.id)),[]).concat(listOf(box));
+const CAT={gez:"Gezilecek",ye:"Yemek",kal:"Konaklama",not:"Genel"},CK=Object.keys(CAT);
+const HINT={gez:"Nereye gidilir, ne görülür?",ye:"Ne yenir, nerede yenir?",kal:"Nerede kalınır, nelere dikkat?",not:"Aklına gelen her şey…"};
+const nlist=d=>d&&Array.isArray(d.notes)?d.notes.filter(n=>n&&typeof n.k==="string"&&typeof n.t==="string"):[];
+const notesOf=id=>nlist(data[id]);
+const catOf=n=>CAT[n.c]?n.c:"not";
+const nsorted=id=>notesOf(id).slice().sort((a,b)=>(!!a.ok-!!b.ok)||(a.a||0)-(b.a||0));
+const allNotes=()=>IL.reduce((a,il)=>a.concat(notesOf(il.id)),[]);
+const linkify=s=>s.replace(/https?:\/\/[^\s<]+[^\s<.,;:!?)\]]/g,u=>`<a href="${u}" target=_blank rel=noopener>${u}</a>`);
 
 /* ---- cihazdaki depo (IndexedDB) ---- */
 function openDB(){return new Promise((res,rej)=>{const r=indexedDB.open("gezdigim-iller",1);r.onupgradeneeded=()=>{const d=r.result;if(!d.objectStoreNames.contains("blobs"))d.createObjectStore("blobs");if(!d.objectStoreNames.contains("docs"))d.createObjectStore("docs")};r.onsuccess=()=>res(r.result);r.onerror=()=>rej(r.error);r.onblocked=()=>rej(new Error("blocked"))})}
@@ -485,14 +562,15 @@ function renderUp(){
 }
 function usageSoon(){clearTimeout(ut);ut=setTimeout(usage,300)}
 async function usage(){
-  const all=allPhotos(),n=all.length,el=$("bk");
-  let s=n?`${n} fotoğraf bu telefonda saklanıyor`:"Eklediğin fotoğraflar hiçbir yere yüklenmez; yalnızca bu telefonda durur.";
+  const all=allPhotos(),n=all.length,ns=allNotes(),nn=ns.length,el=$("bk");
+  const what=[n&&n+" fotoğraf",nn&&nn+" not"].filter(Boolean).join(" ve ");
+  let s=what?`${what} bu telefonda saklanıyor`:"Eklediğin fotoğraflar ve notlar hiçbir yere yüklenmez; yalnızca bu telefonda durur.";
   try{if(n&&navigator.storage&&navigator.storage.estimate){const e=await navigator.storage.estimate();if(e&&e.usage)s+=` (${fmtB(e.usage)})`}}catch(e){}
   let warn=false;
-  if(n){
-    const since=meta.at?all.filter(p=>(p.a||0)>meta.at).length:n;
-    if(meta.at)s+=`. Son yedek: ${fmtD(meta.at)}${since?`; sonrasında ${since} yeni fotoğraf var`:""}.`;
-    else s+=". Henüz yedek almadın; uygulamayı silersen ya da telefon kaybolursa fotoğraflar da gider.";
+  if(n||nn){
+    const since=meta.at?all.filter(p=>(p.a||0)>meta.at).length+ns.filter(x=>(x.a||0)>meta.at).length:n+nn;
+    if(meta.at)s+=`. Son yedek: ${fmtD(meta.at)}${since?`; sonrasında eklenen ${since} fotoğraf/not yedekte yok`:""}.`;
+    else s+=". Henüz yedek almadın; uygulamayı silersen ya da telefon kaybolursa bunlar da gider.";
     warn=!meta.at||since>=20;
   }
   el.textContent=s;el.classList.toggle("warn",warn);
@@ -504,8 +582,9 @@ function shown(){
   return IL.filter(il=>(!reg||il.r===reg)&&(filt==="all"||(filt==="yes")===(photos(il.id).length>0))&&(!qq||il.k.includes(qq)||qq===String(il.p)||qq===il.id));
 }
 function tile(il){
-  const c=cover(il.id),n=photos(il.id).length;
-  return`<a class="tile${c?" on":""}" href="#il-${il.p}" data-act=go><div class=ph>${c?img(c)+`<span class=plate>${il.id}</span>`:`<span class=num>${il.id}</span>`}</div><div class=cap><b>${il.n}</b><span>${n?n+" fotoğraf":REG[il.r]}</span></div></a>`;
+  const c=cover(il.id),n=photos(il.id).length,nn=notesOf(il.id).length;
+  const cap=n?n+" fotoğraf"+(nn?` · ${nn} not`:""):nn?nn+" not":REG[il.r];
+  return`<a class="tile${c?" on":""}" href="#il-${il.p}" data-act=go><div class=ph>${c?img(c)+`<span class=plate>${il.id}</span>`:`<span class=num>${il.id}</span>`}</div><div class=cap><b>${il.n}</b><span>${cap}</span></div></a>`;
 }
 function renderHome(){
   const vn=IL.filter(il=>photos(il.id).length).length,pn=IL.reduce((s,il)=>s+photos(il.id).length,0);
@@ -581,7 +660,7 @@ function mapScale(){
 }
 function renderMap(){
   if(!buildMap())return;
-  IL.forEach((il,i)=>{const v=photos(il.id).length>0,p=M.paths[il.id];p.classList.toggle("v",v);p.classList.toggle("sel",il.id===selId);M.texts[i].classList.toggle("v",v)});
+  IL.forEach((il,i)=>{const v=photos(il.id).length>0,p=M.paths[il.id];p.classList.toggle("v",v);p.classList.toggle("n",!v&&notesOf(il.id).length>0);p.classList.toggle("sel",il.id===selId);M.texts[i].classList.toggle("v",v)});
   if(selId)$("mpg").appendChild(M.paths[selId]);
   const dots=[];IL.forEach(il=>photos(il.id).forEach(p=>{if(typeof p.la==="number"&&typeof p.lo==="number")dots.push(`<circle cx="${mx(p.lo).toFixed(1)}" cy="${my(p.la).toFixed(1)}"></circle>`)}));
   $("mdg").innerHTML=dots.join("");
@@ -589,8 +668,12 @@ function renderMap(){
 }
 function renderCard(){
   const c=$("mcard");if(!selId){c.hidden=true;return}
-  const il=BYID[selId],ps=sorted(il.id);c.hidden=false;
-  html(c,`<div class=mch><span class="plate s">${il.id}</span><div><b>${il.n}</b><span>${REG[il.r]} · ${ps.length?ps.length+" fotoğraf":"henüz fotoğraf yok"}</span></div>${ps.length?`<a class="btn dng" href="#il-${il.p}" data-act=go>Albümü aç</a>`:""}</div>`+(ps.length?`<div class=mst>${ps.slice(0,20).map(p=>`<button class=mth data-act=mopen data-k="${esc(p.k)}" aria-label="Fotoğrafı aç">${img(p)}</button>`).join("")}</div>`:ok?`<button class=btn data-act=madd>${I.plus}Bu ile fotoğraf ekle</button>`:""));
+  const il=BYID[selId],ps=sorted(il.id),ns=nsorted(il.id);c.hidden=false;
+  const mt=[REG[il.r],ps.length?ps.length+" fotoğraf":"henüz fotoğraf yok"];if(ns.length)mt.push(ns.length+" not");
+  html(c,`<div class=mch><span class="plate s">${il.id}</span><div><b>${il.n}</b><span>${mt.map(x=>`<span class=nw>${x}</span>`).join(" · ")}</span></div>${ps.length?`<a class="btn dng" href="#il-${il.p}" data-act=go>Albümü aç</a>`:""}</div>`
+    +(ps.length?`<div class=mst>${ps.slice(0,20).map(p=>`<button class=mth data-act=mopen data-k="${esc(p.k)}" aria-label="Fotoğrafı aç">${img(p)}</button>`).join("")}</div>`:"")
+    +(ns.length?`<div class="nrs mcn">${ns.slice(0,6).map(n=>noteRow(il.id,n)).join("")}${ns.length>6?`<a class=nmore href="#il-${il.p}" data-act=go>Tüm notlar (${ns.length})</a>`:""}</div>`:"")
+    +(ok?`<div class=mcb><button class=btn data-act=nadd data-id=${il.id}>${I.plus}Not ekle</button>${ps.length?"":`<button class=btn data-act=madd>${I.plus}Fotoğraf ekle</button>`}</div>`:""));
 }
 function selectProv(id){
   selId=id;renderMap();
@@ -598,7 +681,7 @@ function selectProv(id){
 }
 {
   const s=$("map"),pts=new Map();let moved=0,tapId=null;
-  const tip=e=>{const id=e.target.dataset&&e.target.dataset.id,t=$("mtip");if(!id){t.hidden=true;return}const n=photos(id).length,r=s.getBoundingClientRect();t.textContent=BYID[id].n+(n?` · ${n} fotoğraf`:"");t.style.left=e.clientX-r.left+"px";t.style.top=e.clientY-r.top+"px";t.hidden=false};
+  const tip=e=>{const id=e.target.dataset&&e.target.dataset.id,t=$("mtip");if(!id){t.hidden=true;return}const n=photos(id).length,nn=notesOf(id).length,r=s.getBoundingClientRect();t.textContent=BYID[id].n+(n?` · ${n} fotoğraf`:"")+(nn?` · ${nn} not`:"");t.style.left=e.clientX-r.left+"px";t.style.top=e.clientY-r.top+"px";t.hidden=false};
   s.addEventListener("pointerdown",e=>{if(!M)return;try{s.setPointerCapture(e.pointerId)}catch(x){}pts.set(e.pointerId,[e.clientX,e.clientY]);if(pts.size===1){moved=0;tapId=e.target.dataset?e.target.dataset.id:null}else tapId=null;$("mtip").hidden=true});
   s.addEventListener("pointermove",e=>{
     if(!M)return;
@@ -624,10 +707,76 @@ function selectProv(id){
   }).observe(s);
 }
 
+/* ---- notlar ---- */
+function noteRow(id,n){
+  const c=catOf(n),k=esc(n.k);
+  return`<div class="nr${n.ok?" dn":""}"><button class=ck data-act=ntok data-id=${id} data-k="${k}" aria-pressed=${!!n.ok} aria-label="${n.ok?"Yapılmadı olarak işaretle":"Yaptım olarak işaretle"}"><span class=cb>${I.check}</span></button><div class=nb data-act=nted data-id=${id} data-k="${k}" role=button tabindex=0><p><span class="tag t-${c}">${CAT[c]}</span><span class=tx>${linkify(esc(n.t))}</span></p></div></div>`;
+}
+function cityNotes(il){
+  const ns=nsorted(il.id);
+  return`<div class=cnh><div><b>Notlarım</b>${ns.length?"":" <span>· henüz yok</span>"}</div>${ok?`<button class=btn data-act=nadd data-id=${il.id}>${I.plus}Not ekle</button>`:""}</div>`+(ns.length?`<div class=nrs>${ns.map(n=>noteRow(il.id,n)).join("")}</div>`:"");
+}
+function renderNotes(){
+  const qq=fold($("nq").value.trim()),cnt={"":0};let done=0;CK.forEach(c=>{cnt[c]=0});
+  IL.forEach(il=>notesOf(il.id).forEach(n=>{cnt[""]++;cnt[catOf(n)]++;if(n.ok)done++}));
+  if(!done)hideDone=false;
+  $("nadd").hidden=!ok;
+  $("ncf").innerHTML=[["","Tümü"]].concat(CK.map(c=>[c,CAT[c]])).map(([v,l])=>`<button class=chip data-act=ncat data-v="${v}" aria-pressed=${ncat===v}>${l}<small>${cnt[v]}</small></button>`).join("")+(done?`<button class=chip data-act=nhide aria-pressed=${hideDone}>Yapılanları gizle<small>${done}</small></button>`:"");
+  const gs=[];
+  IL.forEach(il=>{
+    let ns=nsorted(il.id).filter(n=>(!ncat||catOf(n)===ncat)&&!(hideDone&&n.ok));
+    if(qq&&!(il.k.includes(qq)||qq===String(il.p)||qq===il.id))ns=ns.filter(n=>fold(n.t).includes(qq));
+    if(ns.length)gs.push(`<section class=ng><div class=ngh><a class=ngt href="#il-${il.p}" data-act=go><span class="plate s">${il.id}</span><b>${il.n}</b><small>${ns.length} not</small></a>${ok?`<button class=ia data-act=nadd data-id=${il.id} aria-label="${il.n} için not ekle">${I.plus}</button>`:""}</div><div class=nrs>${ns.map(n=>noteRow(il.id,n)).join("")}</div></section>`);
+  });
+  $("nl").innerHTML=gs.length?gs.join(""):cnt[""]?`<p class=none>Eşleşen not yok.</p>`:`<div class=empty style="margin-top:16px"><b>Henüz not yok</b><p>Gitmek istediğin ya da gittiğin her il için kendine not al: nerede ne yenir, nereye gidilir, nerede kalınır.</p>${ok?`<button class=add data-act=nadd>${I.plus}İlk notunu ekle</button>`:""}</div>`;
+}
+async function noteNew(id){
+  if(!ok){toast(fail||"Notlar bu tarayıcıda saklanamıyor.");return}
+  if(!id){const il=await pick("Hangi il için not?");if(!il)return;id=il.id}
+  openNe(id,null);
+}
+function openNe(id,k){
+  const n=k?notesOf(id).find(x=>x.k===k):null;if(k&&!n)return;
+  ned={id,from:id,k,c:n?catOf(n):lastCat,t0:n?n.t:""};
+  $("net").textContent=n?"Notu düzenle":"Yeni not";$("nedel").hidden=!n;$("netx").value=n?n.t:"";
+  drawNe();$("ne").hidden=false;if(!n)$("netx").focus();
+}
+function drawNe(){
+  if(!ned)return;const il=BYID[ned.id];
+  $("neil").innerHTML=`<span class="plate s">${il.id}</span><span>${il.n}</span><small>Değiştir</small>`;
+  $("nec").innerHTML=CK.map(c=>`<button class=sg role=radio data-act=necat data-v=${c} aria-checked=${ned.c===c}>${CAT[c]}</button>`).join("");
+  $("netx").placeholder=HINT[ned.c];
+}
+function closeNe(){$("ne").hidden=true;ned=null}
+async function saveNe(){
+  const s=ned;if(!s)return;
+  const t=$("netx").value.trim().slice(0,2000);
+  if(!t){if(s.k)return delNote(s.from,s.k);closeNe();return}
+  try{
+    if(!s.k)await mutate("iller/"+s.id,d=>{d.notes=nlist(d).concat({k:newId(),t,c:s.c,a:Date.now(),ok:false})});
+    else if(s.id===s.from)await mutate("iller/"+s.id,d=>{d.notes=nlist(d);const x=d.notes.find(y=>y.k===s.k);if(x){x.t=t;x.c=s.c;x.e=Date.now()}});
+    else{
+      const old=notesOf(s.from).find(y=>y.k===s.k)||{k:s.k,a:Date.now()},nw={...old,t,c:s.c,e:Date.now()};
+      await mutate("iller/"+s.id,d=>{d.notes=nlist(d).filter(y=>y.k!==s.k).concat(nw)});
+      await mutate("iller/"+s.from,d=>{d.notes=nlist(d).filter(y=>y.k!==s.k)});
+      toast(`Not ${BYID[s.id].n} iline taşındı`);
+    }
+    lastCat=s.c;if(ned===s)closeNe();
+  }catch(e){toast(errMsg(e))}
+}
+async function delNote(id,k){
+  const n=notesOf(id).find(x=>x.k===k);if(!n)return closeNe();
+  if(!await ask("Not silinsin mi?",n.t.length>90?n.t.slice(0,90)+"…":n.t,"Sil"))return;
+  try{await mutate("iller/"+id,d=>{d.notes=nlist(d).filter(x=>x.k!==k)});closeNe();toast("Not silindi")}catch(e){toast(errMsg(e))}
+}
+function toggleNote(id,k){if(!ok)return;mutate("iller/"+id,d=>{d.notes=nlist(d);const x=d.notes.find(y=>y.k===k);if(x)x.ok=!x.ok}).catch(e=>toast(errMsg(e)))}
+
 /* ---- il sayfası ---- */
 function renderCity(){
   const il=cur,n=photos(il.id).length;
-  $("ch").innerHTML=`<a class=back href="${tab==="map"?"#harita":"#"}">${I.back}${tab==="map"?"Harita":"Tüm iller"}</a><div class=chead><div><div class=bigplate><s>TR</s><b>${il.id} ${UP(il.n)}</b></div><p class=meta>${REG[il.r]} Bölgesi · ${n?n+" fotoğraf":"henüz fotoğraf yok"}</p></div>${ok&&n?`<button class=add data-act=add>${I.plus}Bu ile fotoğraf ekle</button>`:""}</div>`;
+  const bk=tab==="map"?["#harita","Harita"]:tab==="notes"?["#notlar","Notlar"]:["#","Tüm iller"];
+  $("cn").innerHTML=cityNotes(il);
+  $("ch").innerHTML=`<a class=back href="${bk[0]}">${I.back}${bk[1]}</a><div class=chead><div><div class=bigplate><s>TR</s><b>${il.id} ${UP(il.n)}</b></div><p class=meta>${REG[il.r]} Bölgesi · ${n?n+" fotoğraf":"henüz fotoğraf yok"}</p></div>${ok&&n?`<button class=add data-act=add>${I.plus}Bu ile fotoğraf ekle</button>`:""}</div>`;
   const ps=sorted(il.id),cv=cover(il.id);
   html($("pics"),ps.length?ps.map((p,i)=>`<button class=pic data-act=open data-i=${i} aria-label="Fotoğraf ${i+1}${p.n?": "+esc(p.n):""}">${img(p)}${ps.length>1&&cv&&cv.k===p.k?"<em>Kapak</em>":""}</button>`).join("")
     :`<div class=empty><b>Bu ilde henüz fotoğraf yok</b><p>${!ready?"Albüm açılıyor…":ok?"Ana sayfadan eklediğin fotoğraflar konumlarına göre buraya kendiliğinden gelir. İstersen buradan doğrudan bu ile de ekleyebilirsin.":fail}</p>${ok?`<button class=add data-act=add>${I.plus}Bu ile fotoğraf ekle</button>`:""}</div>`);
@@ -735,10 +884,10 @@ async function makeZip(files,prog){
 }
 async function exportZip(){
   if(busy||!ok)return;
-  const all=allPhotos();if(!all.length){toast("Yedeklenecek fotoğraf yok.");return}
+  const all=allPhotos(),nn=allNotes().length;if(!all.length&&!nn){toast("Yedeklenecek bir şey yok.");return}
   busy=true;let file=null;
   try{
-    const docs={};IL.forEach(il=>{if(photos(il.id).length)docs["iller/"+il.id]=data[il.id]});if(listOf(box).length)docs[BOX]=box;
+    const docs={};IL.forEach(il=>{if(photos(il.id).length||notesOf(il.id).length)docs["iller/"+il.id]=data[il.id]});if(listOf(box).length)docs[BOX]=box;
     const ids=new Set();all.forEach(p=>{[p.f,p.t].forEach(x=>{if(sid(x))ids.add(x)})});
     const files=[{name:"album.json",blob:new Blob([JSON.stringify({app:"gezdigim-iller",v:1,at:Date.now(),docs})],{type:"application/json"})}];
     let i=0;for(const id of ids){const b=await getBlob(id).catch(()=>null);if(b)files.push({name:"f/"+id+".jpg",blob:b});if(++i%10===0)bar(`Yedek hazırlanıyor ${i} / ${ids.size}`,i/ids.size/2)}
@@ -747,7 +896,7 @@ async function exportZip(){
     file=new File([zip],name,{type:"application/zip"});
   }catch(e){bar(null);busy=false;toast(e&&e.message==="big"?"Yedek 4 GB'ı aşıyor; bu sürüm bu kadar büyük yedek alamıyor.":"Yedek hazırlanamadı.");return}
   bar(null);
-  const go=await ask("Yedek hazır",`${all.length} fotoğraf, ${fmtB(file.size)}. Kaydet'e basınca açılan ekranda “Dosyalara Kaydet”i seçip iCloud Drive'a ya da telefonuna kaydet.`,"Kaydet");
+  const go=await ask("Yedek hazır",`${[all.length&&all.length+" fotoğraf",nn&&nn+" not"].filter(Boolean).join(", ")}, ${fmtB(file.size)}. Kaydet'e basınca açılan ekranda “Dosyalara Kaydet”i seçip iCloud Drive'a ya da telefonuna kaydet.`,"Kaydet");
   busy=false;if(!go)return;
   try{
     if(navigator.canShare&&navigator.canShare({files:[file]}))await navigator.share({files:[file],title:file.name});
@@ -774,13 +923,15 @@ async function importZip(f){
     const paths=Object.keys(docs).filter(k=>k===BOX||/^iller\/\d\d$/.test(k)&&BYID[k.slice(6)]);
     const have=new Set(allPhotos().map(p=>p.k));
     const add=paths.reduce((s,k)=>s+listOf(docs[k]).filter(p=>!have.has(p.k)).length,0);
+    const haveN=new Set(allNotes().map(n=>n.k)),addN=paths.reduce((s,k)=>s+nlist(docs[k]).filter(n=>!haveN.has(n.k)).length,0);
+    const what=[add&&add+" fotoğraf",addN&&addN+" not"].filter(Boolean).join(" ve ");
     bar(null);
-    if(!add){busy=false;toast("Bu yedekteki fotoğrafların hepsi zaten albümde.");return}
-    if(!await ask("Yedek geri yüklensin mi?",`${add} fotoğraf albümüne eklenecek. Albümde olanlar silinmez.`,"Geri yükle")){busy=false;return}
+    if(!add&&!addN){busy=false;toast("Bu yedekteki her şey zaten albümde.");return}
+    if(!await ask("Yedek geri yüklensin mi?",`${what} albümüne eklenecek. Albümde olanlar silinmez.`,"Geri yükle")){busy=false;return}
     let i=0;for(const[id,b]of blobs){await putBlob(id,b);if(++i%10===0)bar(`Geri yükleniyor ${i} / ${blobs.length}`,i/blobs.length)}
-    for(const k of paths){const src=docs[k];await mutate(k,d=>{const hv=new Set(listOf(d).map(p=>p.k));d.photos=listOf(d).concat(listOf(src).filter(p=>!hv.has(p.k)));if(!d.cover&&src.cover)d.cover=src.cover})}
+    for(const k of paths){const src=docs[k];await mutate(k,d=>{const hv=new Set(listOf(d).map(p=>p.k));d.photos=listOf(d).concat(listOf(src).filter(p=>!hv.has(p.k)));if(!d.cover&&src.cover)d.cover=src.cover;const hn=new Set(nlist(d).map(n=>n.k)),sn=nlist(src).filter(n=>!hn.has(n.k));if(sn.length)d.notes=nlist(d).concat(sn)})}
     if(zipAt>(meta.at||0)){meta={...meta,at:zipAt};await putDoc("ayar",meta)}
-    toast(`${add} fotoğraf geri yüklendi.`);
+    toast(`${what} geri yüklendi.`);
   }catch(e){toast(e&&e.message==="format"?"Bu dosya bu uygulamanın yedeği değil.":errMsg(e))}
   bar(null);busy=false;usage();
 }
@@ -788,8 +939,8 @@ async function importZip(f){
 /* ---- il seçici, onay, bildirim ---- */
 function pick(title,ex){
   $("pkt").textContent=title;$("pkq").value="";$("pk").dataset.ex=ex||"";
-  const rec=IL.filter(il=>il.id!==ex&&photos(il.id).length).sort((a,b)=>(data[b.id].u||0)-(data[a.id].u||0)).slice(0,6);
-  $("pkr").innerHTML=rec.length?"<span>Son eklediklerin</span>"+rec.map(il=>`<button class=chip data-act=pk data-id=${il.id}>${il.n}</button>`).join(""):"";
+  const rec=IL.filter(il=>il.id!==ex&&(photos(il.id).length||notesOf(il.id).length)).sort((a,b)=>(data[b.id].u||0)-(data[a.id].u||0)).slice(0,6);
+  $("pkr").innerHTML=rec.length?"<span>Son kullandıkların</span>"+rec.map(il=>`<button class=chip data-act=pk data-id=${il.id}>${il.n}</button>`).join(""):"";
   drawPk();$("pk").hidden=false;$("pkl").scrollTop=0;
   if(matchMedia("(pointer:fine)").matches)setTimeout(()=>$("pkq").focus(),30);
   return new Promise(r=>{pkR=r});
@@ -804,30 +955,41 @@ function toast(m){const t=$("toast");t.textContent=m;t.classList.add("on");clear
 /* ---- yönlendirme ve olaylar ---- */
 function refresh(){
   if(cur){renderCity();if(!$("lb").hidden)syncLb()}
-  else{renderHome();if(tab==="map")renderMap()}
+  else{renderHome();if(tab==="map")renderMap();else if(tab==="notes")renderNotes()}
   renderTray();usageSoon();
 }
 function route(){
   const h=location.hash,m=/^#il-(\d{1,2})$/.exec(h),il=m?IL[+m[1]-1]:null;
-  closeLb();cur=il||null;if(!cur)tab=h==="#harita"?"map":"grid";
-  $("home").hidden=!!cur;$("city").hidden=!cur;$("gv").hidden=tab!=="grid";$("mv").hidden=tab!=="map";
-  $("tg").setAttribute("aria-selected",tab==="grid");$("tm").setAttribute("aria-selected",tab==="map");
+  closeLb();cur=il||null;if(!cur)tab=h==="#harita"?"map":h==="#notlar"?"notes":"grid";
+  $("home").hidden=!!cur;$("city").hidden=!cur;$("gv").hidden=tab!=="grid";$("mv").hidden=tab!=="map";$("nv").hidden=tab!=="notes";
+  $("tg").setAttribute("aria-selected",tab==="grid");$("tm").setAttribute("aria-selected",tab==="map");$("tn").setAttribute("aria-selected",tab==="notes");
   document.title=cur?cur.n+" · Gezdiğim İller":"Gezdiğim İller";
   if(cur){
     renderCity();scrollTo(0,0);
     if(pendingOpen){const i=sorted(cur.id).findIndex(p=>p.k===pendingOpen);pendingOpen=null;if(i>=0)openLb(i)}
   }else{
     renderHome();renderTray();
-    if(tab==="map")requestAnimationFrame(()=>{renderMap();scrollTo(0,mapY)});else scrollTo(0,homeY);
+    if(tab==="map")requestAnimationFrame(()=>{renderMap();scrollTo(0,mapY)});else if(tab==="notes"){renderNotes();scrollTo(0,notesY)}else scrollTo(0,homeY);
   }
 }
 addEventListener("hashchange",route);
 document.addEventListener("click",e=>{
   if(e.target.id==="dlg")return answer(false);
   if(e.target.id==="pk")return pkDone(null);
+  if(e.target.closest("a[target=_blank]"))return;
   const t=e.target.closest("[data-act]");if(!t)return;
   const a=t.dataset.act;
-  if(a==="go"){if(tab==="map")mapY=scrollY;else homeY=scrollY}
+  if(a==="go"){if(tab==="map")mapY=scrollY;else if(tab==="notes")notesY=scrollY;else homeY=scrollY}
+  else if(a==="nadd")noteNew(t.dataset.id||null);
+  else if(a==="ntok")toggleNote(t.dataset.id,t.dataset.k);
+  else if(a==="nted"){if(ok)openNe(t.dataset.id,t.dataset.k)}
+  else if(a==="ncat"){ncat=t.dataset.v;renderNotes()}
+  else if(a==="nhide"){hideDone=!hideDone;renderNotes()}
+  else if(a==="neil"){if(ned){const s=ned;pick("Bu not hangi il için?").then(il=>{if(il&&ned===s){s.id=il.id;drawNe()}})}}
+  else if(a==="necat"){if(ned){ned.c=t.dataset.v;drawNe()}}
+  else if(a==="nesave")saveNe();
+  else if(a==="nex")closeNe();
+  else if(a==="nedel"){if(ned&&ned.k)delNote(ned.from,ned.k)}
   else if(a==="filt"||a==="reg"){if(a==="filt")filt=t.dataset.v;else reg=t.dataset.v;renderHome();const b=document.querySelector(`[data-act=${a}][data-v="${t.dataset.v}"]`);if(b)b.focus()}
   else if(a==="hadd"||a==="add"){addTo=a==="add"&&cur?cur.id:null;$("fi").click()}
   else if(a==="madd"){addTo=selId;$("fi").click()}
@@ -857,12 +1019,15 @@ $("zi").addEventListener("change",e=>{const f=e.target.files&&e.target.files[0];
 $("q").addEventListener("input",e=>{q=e.target.value;renderHome()});
 $("q").addEventListener("keydown",e=>{if(e.key==="Enter"){const l=shown();if(l.length===1){homeY=0;location.hash="il-"+l[0].p}}});
 $("pkq").addEventListener("input",drawPk);
-$("pkq").addEventListener("keydown",e=>{if(e.key==="Enter"){const l=pkList();if(l.length===1)pkDone(l[0].id)}});
+$("nq").addEventListener("input",renderNotes);
+$("pkq").addEventListener("keydown",e=>{if(e.key==="Enter"){e.preventDefault();const l=pkList();if(l.length===1)pkDone(l[0].id)}});
 $("note").addEventListener("input",fitNote);
 $("note").addEventListener("blur",saveNote);
 document.addEventListener("keydown",e=>{
+  if((e.key==="Enter"||e.key===" ")&&e.target.getAttribute&&e.target.getAttribute("role")==="button"&&e.target.dataset.act){e.preventDefault();e.target.click();return}
   if(!$("dlg").hidden){if(e.key==="Escape")answer(false);return}
   if(!$("pk").hidden){if(e.key==="Escape")pkDone(null);return}
+  if(!$("ne").hidden){if(e.key==="Escape"&&$("netx").value.trim()===(ned?ned.t0:""))closeNe();else if(e.key==="Enter"&&(e.metaKey||e.ctrlKey)){e.preventDefault();saveNe()}return}
   if($("lb").hidden)return;
   if(e.target.id==="note"){if(e.key==="Enter"&&!e.shiftKey){e.preventDefault();e.target.blur()}else if(e.key==="Escape")e.target.blur();return}
   if(e.key==="Escape")closeLb();else if(e.key==="ArrowLeft")step(-1);else if(e.key==="ArrowRight")step(1);
